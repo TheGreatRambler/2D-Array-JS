@@ -1,5 +1,6 @@
 # 2D-Array-JS
-Two dimensional arrays stored in one dimensional arrays Javascript
+
+Collection of functions that, given a x and y value, returns an index in a one dimensional array. These functions can also be used as pairing functions.
 
 ## API
 
