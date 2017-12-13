@@ -7,14 +7,15 @@
     <script>
     var dimensions = [20, 20];
     var numofitems = dimensions[0] * dimensions[1];
-    var methodoptions = ["szudzik", "interleave", "triangle", "primefactor", "cantorpair", "bitwise"];
+    var methodoptions = ["szudzik", "interleave", "triangle", "primefactor", "cantorpair", "bitwise", "hopullman"];
     var testerobject = {
       interleave: [],
       triangle: [],
       primefactor: [],
       cantorpair: [],
       bitwise: [],
-      szudzik: []
+      szudzik: [],
+      hopullman: []
     };
     var times = {
       interleave: 0,
@@ -22,7 +23,8 @@
       primefactor: 0,
       cantorpair: 0,
       bitwise: 0,
-      szudzik: 0
+      szudzik: 0,
+      hopullman: 0
     }
     var repeats = {
       interleave: 0,
@@ -30,7 +32,8 @@
       primefactor: 0,
       cantorpair: 0,
       bitwise: 0,
-      szudzik: 0
+      szudzik: 0,
+      hopullman: 0
     }
     	for (var x = 0; x < dimensions[0]; x++) {
       	for (var y = 0; y < dimensions[1]; y++) {
