@@ -37,13 +37,13 @@ A index derived through the cantor pairing function. Read about it [here](https:
 method = "bitwise";
 ```
 
-A index derived through bitwise functions. Read about it [here](https://en.wikipedia.org/wiki/Pairing_function).
+A index derived through bitwise functions. Read the source [here](https://gist.github.com/KenanSulayman/7720542).
 
 ```javascript
 method = "szudzik";
 ```
 
-A index derived through the szudzik function. Read about it [here](https://en.wikipedia.org/wiki/Pairing_function).
+A index derived through the szudzik function by Martin Dimitrov. Read about it [here](https://codepen.io/sachmata/post/elegant-pairing).
 
 Check out [this page](https://thegreatrambler.github.io/2D-Array-JS/demo.html) for average function times and efficiency.
 
