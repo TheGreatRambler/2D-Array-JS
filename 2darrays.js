@@ -22,7 +22,7 @@ var tdarrayindex = function(x, y, method) {
         var number = (Math.pow((x + y - 1), 2) + x + y - 1) / 2 + y;
         return number;
     } else if (method === "primefactor") {
-        var number = (Math.pow(2, y))(Math.pow(3, x));
+        var number = Math.pow(2, y) * Math.pow(3, x);
         return number;
     } else if (method === "cantorpair") {
         var number = ((x + y)(x + y + 1) / 2) + y;
