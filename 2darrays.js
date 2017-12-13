@@ -10,7 +10,10 @@ var tdarrayindex = function(xval, yval, method, negative) {
         console.warn(negative + " is not valid; this option must be a bool");
     }
     
-    if (!method || method === "interleave") {
+    if (!method || method === "szudzik") {
+        var number = (x >= y) ? (x * x + x + y) : (y * y + x);
+        return number;
+    } else if (method === "interleave") {
         var xstring = x.toString();
         var ystring = y.toString();
         if (xstring.length > ystring.length) {
@@ -40,9 +43,6 @@ var tdarrayindex = function(xval, yval, method, negative) {
         return number;
     } else if (method === "bitwise") {
         var number = x << 16 & 0xffff0000 | y & 0x0000ffff;
-        return number;
-    } else if (method === "szudzik") {
-        var number = (x >= y) ? (x * x + x + y) : (y * y + x);
         return number;
     } else {
         console.warn(method + " is not a valid method");
