@@ -23,6 +23,8 @@ var twodimensionalarrayindex = function(x, y, method) {
     return number;
   } else if (method === "primefactor") {
   	return (2^y)(3^x);
+  } else if (method === "cantorpair") {
+  	return ((x + y)(x + y + 1) / 2) + y;
   } else {
   	console.warn(method + " is not a valid method");
   }
