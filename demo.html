@@ -31,6 +31,7 @@
           });
         }
       }
+      document.write("Efficiencies (percentage of values assigned in first 100 indices of array; 100 is the amount of indices that were registered): <br>");
       methodoptions.forEach(function(item) {
           var counter = 0;
           for (var d = 0; d < 100; d++) {
@@ -38,10 +39,11 @@
               counter++;
             }
           }
-        document.write("<br>" + item + " efficiency (percentage of values assigned in first 100 indices of array; 100 is the amount of indices that were registered): " + counter / 100);
+        document.write("<br>" + item + ": " + counter / 100);
       });
+      document.write("Performance: <br>");
       methodoptions.forEach(function(item) {
-        document.write("<br>" + item + " average function time: " + times[item] * 10 + " microseconds");
+        document.write("<br>" + item + ": " + times[item] * 10 + " microseconds");
       });
     </script>
   </body>
