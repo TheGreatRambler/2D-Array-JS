@@ -31,7 +31,7 @@
           });
         }
       }
-      document.write("<br><br>Efficiencies (percentage of values assigned in first 100 indices of array; 100 is the amount of indices that were registered): <br>");
+      document.write("<br><br>Efficiencies (percentage of values assigned in first 100 indices of array; 100 is the amount of indices that were registered):");
       methodoptions.forEach(function(item) {
           var counter = 0;
           for (var d = 0; d < 400; d++) {
@@ -41,7 +41,7 @@
           }
         document.write("<br>" + item + ": " + counter / 400);
       });
-      document.write("<br>Performance: <br>");
+      document.write("<br><br>Performance:");
       methodoptions.forEach(function(item) {
         document.write("<br>" + item + ": " + times[item] * 2.5 + " microseconds");
       });
