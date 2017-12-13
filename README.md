@@ -10,6 +10,12 @@ tdarrayindex(x, y, method, negative)
 ### Methods
 
 ```javascript
+method = "szudzik";
+```
+
+A index derived through the szudzik function by Martin Dimitrov. Read about it [here](https://codepen.io/sachmata/post/elegant-pairing). This is the default.
+
+```javascript
 method = "triangle";
 ```
 
@@ -19,7 +25,7 @@ A index derived through triangular numbers. Read about it [here](https://en.wiki
 method = "interleave";
 ```
 
-A index derived by rearranging the digits of each number. Read about it [here](https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel#Interleaving_method). This is the default.
+A index derived by rearranging the digits of each number. Read about it [here](https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel#Interleaving_method).
 
 
 ```javascript
@@ -39,12 +45,6 @@ method = "bitwise";
 ```
 
 A index derived through bitwise functions. Read the source [here](https://gist.github.com/KenanSulayman/7720542).
-
-```javascript
-method = "szudzik";
-```
-
-A index derived through the szudzik function by Martin Dimitrov. Read about it [here](https://codepen.io/sachmata/post/elegant-pairing).
 
 ### Negative
 
