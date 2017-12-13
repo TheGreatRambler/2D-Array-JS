@@ -30,6 +30,9 @@ var tdarrayindex = function(x, y, method) {
     } else if (method === "bitwise") {
         var number = x << 16 & 0xffff0000 | y & 0x0000ffff;
         return number;
+    } else if (method === "szudzik") {
+        var number = (x >= y) ? (x * x + x + y) : (y * y + x);
+        return number;
     } else {
         console.warn(method + " is not a valid method");
     }
