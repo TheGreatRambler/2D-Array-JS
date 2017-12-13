@@ -1,4 +1,5 @@
 var tdarrayindex = function(x, y, method) {
+  var methodoptions = ["interleave", "triangle", "primefactor", "cantorpair"];
   if (!method || method === "interleave") {
     var xstring = x.toString();
     var ystring = y.toString();
