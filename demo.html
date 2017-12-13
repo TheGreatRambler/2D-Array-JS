@@ -6,13 +6,29 @@
     <script src="2darrays.js"></script>
     <script>
     var methodoptions = ["interleave", "triangle", "primefactor", "cantorpair"];
-    	for (var x = 0; x < 11; x++) {
-      	for (var y = 0; y < 11; y++) {
+    var testerobject = {
+      interleave: [],
+      triangle: [],
+      primefactor: [],
+      cantorpair: []
+    };
+    	for (var x = 0; x < 10; x++) {
+      	for (var y = 0; y < 10; y++) {
           methodoptions.forEach(function(item) {
             document.write("(" + x + ", " + y + "): " + item + " -> " + tdarrayindex(x, y, item) + "<br>");
+            testerobject[item][tdarrayindex(x, y, item)] = 9;
           });
         }
       }
+      methodoptions.forEach(function(item) {
+          var counter = 0;
+          testerobject[item].forEach(function(item) {
+            if (item === 9) {
+              counter++;
+            }
+          });
+        document.write("<br>" + item + " density: " + counter / 100);
+      });
     </script>
   </body>
 
