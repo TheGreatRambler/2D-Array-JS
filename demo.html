@@ -1,1 +1,32 @@
+<html>
+
+  <body>
+    
+    <h1>Test</h1>
+    
+    <table id="testdisplay">
+    
+    </table>
+    <script src="2darrays.js"></script>
+    <script>
+    var methodoptions = ["interleave", "triangle", "primefactor", "cantorpair"];
+    var element = document.getElementById("testdisplay");
+      var firstrow = element.insertRow(0);
+      methodoptions.forEach(function(option) {
+        firstrow.insertCell(-1).innerHtml = option;
+      });
+        
+    	for (var x = 0; x < 10; x++) {
+      	for (var y = 0; y < 10; y++) {
+          var row = element.insertRow(-1);
+          row.insertCell(-1).innerHtml = "(" + x + ", " + y + ")";
+          methodoptions.forEach(function(item) {
+          	row.insertCell(-1).innerHtml = tdarrayindex(x, y, item);
+          });
+        }
+      }
+    </script>
+  </body>
+
+</html>
 
