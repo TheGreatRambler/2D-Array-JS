@@ -46,6 +46,12 @@ method = "bitwise";
 
 A index derived through bitwise functions. Read the source [here](https://gist.github.com/KenanSulayman/7720542).
 
+```javascript
+method = "hopullman";
+```
+
+A index derived through a pairing function devised by Hopcroft and Ullman. Read about it [here](http://mathworld.wolfram.com/PairingFunction.html).
+
 ### Negative
 
 ```javascript
