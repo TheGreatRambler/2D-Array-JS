@@ -1,4 +1,15 @@
-var tdarrayindex = function(x, y, method) {
+var tdarrayindex = function(xval, yval, method, negative) {
+    var x, y;
+    if (!negative || negative === false) {
+        x = xval;
+        y = yval;
+    } else if (negative === true) {
+        x = xval >= 0 ? xval * 2 : Math.abs(xval) * 2 - 1;
+        y = yval >= 0 ? yval * 2 : Math.abs(yval) * 2 - 1;
+    } else {
+        console.warn(negative + " is not valid; this option must be a bool");
+    }
+    
     if (!method || method === "interleave") {
         var xstring = x.toString();
         var ystring = y.toString();
