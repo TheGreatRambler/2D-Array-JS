@@ -25,7 +25,7 @@ A index derived by rearranging the digits of each number. Read about it [here](h
 method = "primefactor";
 ```
 
-A index derived through prime factors. Read about it [here](https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel#Prime_factorization_method). Note: this method leaves some indices of the array empty.
+A index derived through prime factors. Read about it [here](https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel#Prime_factorization_method). Note: this method creates very large arrays.
 
 ```javascript
 method = "cantorpair";
