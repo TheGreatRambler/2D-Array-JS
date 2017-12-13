@@ -21,9 +21,9 @@
     	for (var x = 0; x < 10; x++) {
       	for (var y = 0; y < 10; y++) {
           methodoptions.forEach(function(item) {
-            var t0 = preformance.now();
+            var t0 = performance.now();
             var indexarray = tdarrayindex(x, y, item);
-            var t1 = preformance.now();
+            var t1 = performance.now();
             times[item] += t1 - t0;
             
             document.write("(" + x + ", " + y + "): " + item + " -> " + tdarrayindex(x, y, item) + "<br>");
