@@ -4,9 +4,9 @@ Two dimensional arrays stored in one dimensional arrays Javascript
 ## API
 
 ```javascript
-tdarrayindex(x, y, method)
+tdarrayindex(x, y, method, negative)
 ```
-Possible methods include:
+### Methods
 
 ```javascript
 method = "triangle";
@@ -44,6 +44,18 @@ method = "szudzik";
 ```
 
 A index derived through the szudzik function by Martin Dimitrov. Read about it [here](https://codepen.io/sachmata/post/elegant-pairing).
+
+### Negative
+
+```javascript
+negative = false
+```
+this specifies that negative values for either x or y are not to be supported. This is the default.
+
+```javascript
+negative = true
+```
+This specifies that negative values for either x or y are supported. Be warned that this method makes twice as large arrays if you only use positive values!
 
 Check out [this page](https://thegreatrambler.github.io/2D-Array-JS/demo.html) for average function times and efficiency.
 
