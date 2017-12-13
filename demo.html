@@ -22,6 +22,14 @@
       bitwize: 0,
       szudzik: 0
     }
+    var repeats = {
+      interleave: 0,
+      triangle: 0,
+      primefactor: 0,
+      cantorpair: 0,
+      bitwize: 0,
+      szudzik: 0
+    }
     	for (var x = 0; x < 20; x++) {
       	for (var y = 0; y < 20; y++) {
           methodoptions.forEach(function(item) {
@@ -31,7 +39,10 @@
             times[item] += t1 - t0;
             
             document.write("(" + x + ", " + y + "): " + item + " -> " + tdarrayindex(x, y, item) + "<br>");
-            testerobject[item][tdarrayindex(x, y, item)] = 9;
+            if (testerobject[item][tdarrayindex(x, y, item)]) {
+              repeats[item]++;
+            }
+            testerobject[item][tdarrayindex(x, y, item)] = "whatever.";
           });
         }
       }
@@ -39,7 +50,7 @@
       methodoptions.forEach(function(item) {
           var counter = 0;
           for (var d = 0; d < 400; d++) {
-            if (testerobject[item][d] === 9) {
+            if (testerobject[item][d]) {
               counter++;
             }
           }
@@ -48,6 +59,10 @@
       document.write("<br><br>Performance:");
       methodoptions.forEach(function(item) {
         document.write("<br>" + item + ": " + times[item] * 2.5 + " microseconds");
+      });
+      document.write("<br><br>Repeat percentage (percentage of times a index was set twice):");
+      methodoptions.forEach(function(item) {
+        document.write("<br>" + item + ": " + repeats[item] / 4 + "%");
       });
     </script>
   </body>
