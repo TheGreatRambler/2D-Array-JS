@@ -19,7 +19,7 @@ var twodimensionalarrayindex = function(x, y, method) {
     
     return Number(finalstring);
   } else if (method === "triangle") {
-		var number = ((x + y - 1) ^ 2 + x + y - 1) / 2 + y;
+    var number = ((x + y - 1) ^ 2 + x + y - 1) / 2 + y;
     return number;
   } else {
   	console.warn(method + " is not a valid method");
