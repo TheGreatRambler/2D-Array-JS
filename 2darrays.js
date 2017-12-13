@@ -44,6 +44,9 @@ var tdarrayindex = function(xval, yval, method, negative) {
     } else if (method === "bitwise") {
         var number = x << 16 & 0xffff0000 | y & 0x0000ffff;
         return number;
+    } else if (method === "hopullman") {
+        var number = ((x + y - 2) * (x + y - 1)) / 2 + x;
+        return number;
     } else {
         console.warn(method + " is not a valid method");
     }
