@@ -18,8 +18,8 @@
       primefactor: 0,
       cantorpair: 0
     }
-    	for (var x = 0; x < 10; x++) {
-      	for (var y = 0; y < 10; y++) {
+    	for (var x = 0; x < 20; x++) {
+      	for (var y = 0; y < 20; y++) {
           methodoptions.forEach(function(item) {
             var t0 = performance.now();
             var indexarray = tdarrayindex(x, y, item);
@@ -34,16 +34,16 @@
       document.write("<br><br>Efficiencies (percentage of values assigned in first 100 indices of array; 100 is the amount of indices that were registered): <br>");
       methodoptions.forEach(function(item) {
           var counter = 0;
-          for (var d = 0; d < 100; d++) {
+          for (var d = 0; d < 400; d++) {
             if (testerobject[item][d] === 9) {
               counter++;
             }
           }
-        document.write("<br>" + item + ": " + counter / 100);
+        document.write("<br>" + item + ": " + counter / 400);
       });
       document.write("<br>Performance: <br>");
       methodoptions.forEach(function(item) {
-        document.write("<br>" + item + ": " + times[item] * 10 + " microseconds");
+        document.write("<br>" + item + ": " + times[item] * 2.5 + " microseconds");
       });
     </script>
   </body>
