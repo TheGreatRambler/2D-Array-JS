@@ -41,7 +41,7 @@
         document.write("<br>" + item + " efficiency (percentage of values assigned in first 100 indices of array; 100 is the amount of indices that were registered): " + counter / 100);
       });
       methodoptions.forEach(function(item) {
-        document.write("<br>" + item + " average function time: " + times[item] / 100);
+        document.write("<br>" + item + " average function time: " + times[item] * 10 + " microseconds");
       });
     </script>
   </body>
