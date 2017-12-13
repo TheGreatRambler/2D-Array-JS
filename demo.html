@@ -22,10 +22,11 @@
       }
       methodoptions.forEach(function(item) {
           var counter = 0;
-          testerobject[item].forEach(function(item) {
-            if (item === 9) {
+          for (var d = 0; d < 100; d++) {
+            if (testerobject[item][d] === 9) {
               counter++;
             }
+          }
           });
         document.write("<br>" + item + " density: " + counter / 100);
       });
