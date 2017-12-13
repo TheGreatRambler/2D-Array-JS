@@ -12,9 +12,20 @@
       primefactor: [],
       cantorpair: []
     };
+    var times = {
+      interleave: 0,
+      triangle: 0,
+      primefactor: 0,
+      cantorpair: 0
+    }
     	for (var x = 0; x < 10; x++) {
       	for (var y = 0; y < 10; y++) {
           methodoptions.forEach(function(item) {
+            var t0 = preformance.now();
+            var indexarray = tdarrayindex(x, y, item);
+            var t1 = preformance.now();
+            times[item] += t1 - t0;
+            
             document.write("(" + x + ", " + y + "): " + item + " -> " + tdarrayindex(x, y, item) + "<br>");
             testerobject[item][tdarrayindex(x, y, item)] = 9;
           });
@@ -29,6 +40,9 @@
           }
           });
         document.write("<br>" + item + " density: " + counter / 100);
+      });
+      methodoptions.forEach(function(item) {
+        document.write("<br>" + item + " average function time: " + times[item] / 100);
       });
     </script>
   </body>
