@@ -33,4 +33,6 @@ method = "cantorpair";
 
 A index derived through the cantor pairing function. Read about it [here](https://en.wikipedia.org/wiki/Pairing_function).
 
+Check out [this page](https://thegreatrambler.github.io/2D-Array-JS/demo.html) for average function times and efficiency.
+
 Note: This library only returns the index. It does not return a array or mutate an existing array.
