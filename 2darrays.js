@@ -1,4 +1,4 @@
-var twodimensionalarrayindex = function(x, y, method) {
+var tdarrayindex = function(x, y, method) {
   if (!method || method === "interleave") {
     var xstring = x.toString();
     var ystring = y.toString();
