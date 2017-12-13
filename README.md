@@ -27,4 +27,10 @@ method = "primefactor";
 
 A index derived through prime factors. Read about it [here](https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel#Prime_factorization_method). Note: this method leaves some indices of the array empty.
 
+```javascript
+method = "cantorpair";
+```
+
+A index derived through the cantor pairing function. Read about it [here](https://en.wikipedia.org/wiki/Pairing_function).
+
 Note: This library only returns the index. It does not return a array or mutate an existing array.
