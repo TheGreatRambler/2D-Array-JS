@@ -1,7 +1,7 @@
 # 2D-Array-JS
 Two dimensional arrays stored in one dimensional arrays Javascript
 
-Two different methods are avaliable, interleaving or triangular numbers.
+## API
 
 ```javascript
 tdarrayindex(x, y, method)
