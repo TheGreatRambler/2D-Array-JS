@@ -38,11 +38,6 @@
       szudzik: 0,
       hopullman: 0
     }
-    if (document.body.style.fontSize == "") {
-    document.body.style.fontSize = "1.0em";
-    }
-    document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (fontsizemultiply * 0.2) + "em";
-    document.write("dimensions: " + dimensions[0] + " by " + dimensions[1] + " units");
     document.write("<br><br>");
     	for (var x = 0; x < dimensions[0]; x++) {
       	for (var y = 0; y < dimensions[1]; y++) {
@@ -61,7 +56,13 @@
           document.write("<br>");
         }
       }
-      document.write("<br><br>Efficiencies (percentage of values assigned in first x * y indices of array; x * y is the amount of indices that were registered and the dimension of the x and y value block):");
+      if (document.body.style.fontSize == "") {
+        document.body.style.fontSize = "1.0em";
+      }
+      document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (fontsizemultiply * 0.2) + "em";
+      document.write("dimensions: " + dimensions[0] + " by " + dimensions[1] + " units");
+      document.write("<br><br>");
+      document.write("Efficiencies (percentage of values assigned in first x * y indices of array; x * y is the amount of indices that were registered and the dimension of the x and y value block):");
       methodoptions.forEach(function(item) {
           var counter = 0;
           for (var d = 0; d < numofitems; d++) {
