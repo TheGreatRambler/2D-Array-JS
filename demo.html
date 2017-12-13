@@ -9,6 +9,7 @@
     var fontsizemultiply = 0.5;
     var dimensions = [20, 20];
     var numofitems = dimensions[0] * dimensions[1];
+    var datatext = "";
     var methodoptions = ["szudzik", "interleave", "triangle", "primefactor", "cantorpair", "bitwise", "hopullman"];
     var testerobject = {
       interleave: [],
@@ -51,7 +52,7 @@
             var t1 = performance.now();
             times[item] += t1 - t0;
             
-            document.write("(" + x + ", " + y + "): " + item + " -> " + tdarrayindex(x, y, item) + "<br>");
+            datatext += "(" + x + ", " + y + "): " + item + " -> " + tdarrayindex(x, y, item) + "<br>";
             if (testerobject[item][tdarrayindex(x, y, item)]) {
               repeats[item]++;
             }
@@ -78,6 +79,8 @@
       methodoptions.forEach(function(item) {
         document.write("<br>" + item + ": " + (repeats[item] / numofitems) * 100 + "%");
       });
+      document.write("<br><br>");
+      document.write(datatext);
     </script>
   </body>
 
