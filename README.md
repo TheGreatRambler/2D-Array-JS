@@ -13,7 +13,7 @@ tdarrayindex(x, y, method, negative)
 method = "szudzik";
 ```
 
-A index derived through the szudzik function by Martin Dimitrov. Read about it [here](https://codepen.io/sachmata/post/elegant-pairing). This is the default.
+A index derived through the szudzik pairing function by Matthew Szudzik at Wolfram Research. Read about it [here](https://codepen.io/sachmata/post/elegant-pairing). This is the default.
 
 ```javascript
 method = "triangle";
