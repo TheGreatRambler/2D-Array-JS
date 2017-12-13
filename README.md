@@ -20,4 +20,11 @@ method = "interleave";
 
 A index derived by rearranging the digits of each number. Read about it [here](https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel#Interleaving_method). This is the default.
 
+
+```javascript
+method = "primefactor";
+```
+
+A index derived through prime factors. Read about it [here](https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel#Prime_factorization_method). Note: this method leaves some indices of the array empty.
+
 Note: This library only returns the index. It does not return a array or mutate an existing array.
