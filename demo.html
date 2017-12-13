@@ -5,6 +5,8 @@
     <h1>Test</h1>
     <script src="2darrays.js"></script>
     <script>
+    var dimensions = [20, 20];
+    var numofitems = dimensions[0] * dimensions[1];
     var methodoptions = ["interleave", "triangle", "primefactor", "cantorpair", "bitwise", "szudzik"];
     var testerobject = {
       interleave: [],
@@ -30,8 +32,8 @@
       bitwize: 0,
       szudzik: 0
     }
-    	for (var x = 0; x < 20; x++) {
-      	for (var y = 0; y < 20; y++) {
+    	for (var x = 0; x < dimensions[0]; x++) {
+      	for (var y = 0; y < dimensions[1]; y++) {
           methodoptions.forEach(function(item) {
             var t0 = performance.now();
             var indexarray = tdarrayindex(x, y, item);
@@ -46,23 +48,23 @@
           });
         }
       }
-      document.write("<br><br>Efficiencies (percentage of values assigned in first 100 indices of array; 100 is the amount of indices that were registered):");
+      document.write("<br><br>Efficiencies (percentage of values assigned in first x * y indices of array; x * y is the amount of indices that were registered and the dimension of the x and y value block):");
       methodoptions.forEach(function(item) {
           var counter = 0;
-          for (var d = 0; d < 400; d++) {
+          for (var d = 0; d < numofitems; d++) {
             if (testerobject[item][d]) {
               counter++;
             }
           }
-        document.write("<br>" + item + ": " + counter / 4 + "%");
+        document.write("<br>" + item + ": " + (counter / numofitems) * 100 + "%");
       });
       document.write("<br><br>Performance:");
       methodoptions.forEach(function(item) {
         document.write("<br>" + item + ": " + times[item] * 2.5 + " microseconds");
       });
-      document.write("<br><br>Repeat percentage (percentage of times a index was set twice):");
+      document.write("<br><br>Repeat percentage (percentage of times a index was set more than once):");
       methodoptions.forEach(function(item) {
-        document.write("<br>" + item + ": " + repeats[item] / 4 + "%");
+        document.write("<br>" + item + ": " + (repeats[item] / numofitems) * 100 + "%");
       });
     </script>
   </body>
