@@ -21,7 +21,7 @@
       triangle: 0,
       primefactor: 0,
       cantorpair: 0,
-      bitwize: 0,
+      bitwise: 0,
       szudzik: 0
     }
     var repeats = {
@@ -29,7 +29,7 @@
       triangle: 0,
       primefactor: 0,
       cantorpair: 0,
-      bitwize: 0,
+      bitwise: 0,
       szudzik: 0
     }
     	for (var x = 0; x < dimensions[0]; x++) {
@@ -60,7 +60,7 @@
       });
       document.write("<br><br>Performance:");
       methodoptions.forEach(function(item) {
-        document.write("<br>" + item + ": " + times[item] * 2.5 + " microseconds");
+        document.write("<br>" + item + ": " + (times[item] / numofitems) * 1000 + " microseconds");
       });
       document.write("<br><br>Repeat percentage (percentage of times a index was set more than once):");
       methodoptions.forEach(function(item) {
