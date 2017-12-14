@@ -31,6 +31,16 @@
       hopullman: 0,
       rosenstrong: 0
     }
+    var decodetimes = {
+      interleave: 0,
+      triangle: 0,
+      primefactor: 0,
+      cantorpair: 0,
+      bitwise: 0,
+      szudzik: 0,
+      hopullman: 0,
+      rosenstrong: 0
+    }
     var repeats = {
       interleave: 0,
       triangle: 0,
@@ -55,12 +65,19 @@
     	for (var x = 0; x < dimensions[0]; x++) {
       	for (var y = 0; y < dimensions[1]; y++) {
           methodoptions.forEach(function(item) {
+            
             var t0 = performance.now();
             var indexarray = tdarrayindex.encode(x, y, item);
             var t1 = performance.now();
-            times[item] += t1 - t0;
-            var failtext = "";
+            
+            var t2 = performance.now();
             var output = tdarrayindex.decode(indexarray, item, false, false);
+            var t3 = performance.now();
+            
+            times[item] += t1 - t0;
+            decodetimes[item] += t3 - t2;
+            
+            var failtext = "";
             var text;
             if (!output) {
               text = " -> No decoding func";
@@ -95,9 +112,13 @@
           }
         document.write("<br>" + item + ": " + (counter / numofitems) * 100 + "%");
       });
-      document.write("<br><br>Performance:");
+      document.write("<br><br>Encode performance:");
       methodoptions.forEach(function(item) {
         document.write("<br>" + item + ": " + (times[item] / numofitems) * 1000 + " microseconds");
+      });
+      document.write("<br><br>Decode performance:");
+      methodoptions.forEach(function(item) {
+        document.write("<br>" + item + ": " + (decodetimes[item] / numofitems) * 1000 + " microseconds");
       });
       document.write("<br><br>Repeat percentage (percentage of times a index was set more than once):");
       methodoptions.forEach(function(item) {
