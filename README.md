@@ -67,3 +67,5 @@ This specifies that negative values for either x or y are supported. Be warned t
 Check out [this page](https://thegreatrambler.github.io/2D-Array-JS/demo.html) for average function times and efficiency.
 
 Note: This library only returns the index. It does not return a array or mutate an existing array.
+
+If you like this library, a :star: would be appreciated!
