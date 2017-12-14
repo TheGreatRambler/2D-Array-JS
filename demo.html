@@ -59,7 +59,7 @@
             var output = tdarrayindex.decode(indexarray, item, false, false);
             var text;
             if (!output) {
-              text = "No decoding func";
+              text = " -> No decoding func";
             } else if (output[0] !== x && output[1] !== y) {
               fails[item]++;
               text = " -> (" + output[0] + ", " + output[1] + ") FAIL";
