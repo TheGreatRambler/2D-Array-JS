@@ -10,7 +10,7 @@
     var dimensions = [20, 20];
     var numofitems = dimensions[0] * dimensions[1];
     var datatext = "";
-    var methodoptions = ["szudzik", "interleave", "triangle", "primefactor", "cantorpair", "bitwise", "hopullman"];
+    var methodoptions = ["szudzik", "interleave", "triangle", "primefactor", "cantorpair", "bitwise", "hopullman", "rosenstrong"];
     var testerobject = {
       interleave: [],
       triangle: [],
@@ -18,7 +18,8 @@
       cantorpair: [],
       bitwise: [],
       szudzik: [],
-      hopullman: []
+      hopullman: [], 
+      rosenstrong: []
     };
     var times = {
       interleave: 0,
@@ -27,7 +28,8 @@
       cantorpair: 0,
       bitwise: 0,
       szudzik: 0,
-      hopullman: 0
+      hopullman: 0,
+      rosenstrong: 0
     }
     var repeats = {
       interleave: 0,
@@ -36,7 +38,8 @@
       cantorpair: 0,
       bitwise: 0,
       szudzik: 0,
-      hopullman: 0
+      hopullman: 0,
+      rosenstrong: 0
     }
     var fails = {
       interleave: 0,
@@ -45,7 +48,8 @@
       cantorpair: 0,
       bitwise: 0,
       szudzik: 0,
-      hopullman: 0
+      hopullman: 0, 
+      rosenstrong: 0
     }
     document.write("<br><br>");
     	for (var x = 0; x < dimensions[0]; x++) {
