@@ -79,7 +79,6 @@ var tdarrayindex = {
             var xval = t * (t + 3) / 2 - val;
             var yval = val - t * (t + 1) / 2;
             result = [xval, yval];
-    return pair;
         } else if (method === "bitwise") {
             var xval = val >> 16 & 0xFFFF;
             var yval = val & 0xFFFF;
