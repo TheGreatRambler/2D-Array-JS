@@ -75,7 +75,7 @@ var tdarrayindex = {
         } else if (method === "primefactor") {
             console.warn("decoding method for prime factorization does not exist");
         } else if (method === "cantorpair") {
-            w = Math.floor((Math.sqr(8 * val + 1) - 1) / 2);
+            w = Math.floor((Math.sqrt(8 * val + 1) - 1) / 2);
             t = (Math.pow(w, 2) + w) / 2
             yval = z - t;
             xval = w - y;
