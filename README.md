@@ -59,7 +59,7 @@ A index derived through a pairing function devised by Hopcroft and Ullman. Read 
 method = "rosenstrong";
 ```
 
-A index derived through the Rosenburg-Strong pairing function. Read about it [here](https://arxiv.org/pdf/1706.04129.pdf).
+A index derived through the Rosenburg-Strong pairing function. Read about it [here](https://arxiv.org/pdf/1706.04129.pdf). Does not have decode function.
 
 To use `tdarrayindex.decode`, just input value from `tdarrayindex.encode` to get an array containing the x and y value.
 
