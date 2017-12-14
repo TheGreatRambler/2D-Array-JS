@@ -75,11 +75,11 @@ var tdarrayindex = {
         } else if (method === "primefactor") {
             console.warn("decoding method for prime factorization does not exist");
         } else if (method === "cantorpair") {
-            w = Math.floor((Math.sqrt(8 * val + 1) - 1) / 2);
-            t = (Math.pow(w, 2) + w) / 2
-            yval = z - t;
-            xval = w - y;
+            var t = Math.floor((Math.sqrt(1 + 8 * val) - 1)/2);
+            var xval = t * (t + 3) / 2 - val;
+            var yval = val - t * (t + 1) / 2;
             result = [xval, yval];
+    return pair;
         } else if (method === "bitwise") {
             var xval = val >> 16 & 0xFFFF;
             var yval = val & 0xFFFF;
