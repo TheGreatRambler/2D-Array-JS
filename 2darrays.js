@@ -48,11 +48,21 @@ var tdarrayindex = {
         } else if (method === "hopullman") {
             var number = ((x + y - 2) * (x + y - 1)) / 2 + x;
             return number;
+        } else if (method === "rosenstrong") {
+            
         } else {
             console.warn(method + " is not a valid method");
         }
     },
-    decode: function(val, method, negative) {
+    decode: function(val, method, negative, debug) {
+        var debugbool;
+        if (!debug || debug === true) {
+            debugbool = true;
+        } else if (debug === false) {
+            debugbool = false;
+        } else {
+            console.warn(debug + "incorrect option; must be bool");
+        }
         var result;
         if (!method || method === "szudzik") {
             var sqrtz = Math.floor(Math.sqrt(val)),
@@ -71,9 +81,13 @@ var tdarrayindex = {
             }
             result = [Number(resultstringx), Number(resultstringy)];
         } else if (method === "triangle") {
-            console.warn("decoding method for triangular number does not exist");
+            if (debugbool) {
+                console.warn("decoding method for triangular number does not exist");
+            }
         } else if (method === "primefactor") {
-            console.warn("decoding method for prime factorization does not exist");
+            if (debugbool) {
+                console.warn("decoding method for prime factorization does not exist");
+            }
         } else if (method === "cantorpair") {
             var t = Math.floor((Math.sqrt(1 + 8 * val) - 1)/2);
             var xval = t * (t + 3) / 2 - val;
@@ -84,7 +98,9 @@ var tdarrayindex = {
             var yval = val & 0xFFFF;
             result = [xval, yval];
         } else if (method === "hopullman") {
-            console.warn("decoding method for Hopkins Ullman method does not exist");
+            if (debugbool) {
+                console.warn("decoding method for Hopkins Ullman pairing algorithm does not exist");
+            }
         }
         
         if (!negative || negative === false) {
