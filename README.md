@@ -41,7 +41,7 @@ A index derived through prime factors. Read about it [here](https://en.wikipedia
 method = "cantorpair";
 ```
 
-A index derived through the cantor pairing function. Read about it [here](https://en.wikipedia.org/wiki/Pairing_function#Cantor_pairing_function).
+A index derived through the cantor pairing function. Read about it [here](https://en.wikipedia.org/wiki/Pairing_function#Cantor_pairing_function) and read source [here](https://codepen.io/LiamKarlMitchell/pen/xnEca).
 
 ```javascript
 method = "bitwise";
