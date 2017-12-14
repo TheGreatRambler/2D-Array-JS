@@ -49,7 +49,8 @@ var tdarrayindex = {
             var number = ((x + y - 2) * (x + y - 1)) / 2 + x;
             return number;
         } else if (method === "rosenstrong") {
-            
+            var number = Math.pow((Math.max(x, y)), 2) + Math.max(x, y) + x - y;
+            return number;
         } else {
             console.warn(method + " is not a valid method");
         }
@@ -101,6 +102,11 @@ var tdarrayindex = {
             if (debugbool) {
                 console.warn("decoding method for Hopkins Ullman pairing algorithm does not exist");
             }
+        } else if (method === "rosenstrong") {
+            var m = Math.floor(Math.sqrt(val))
+            result = (val - Math.pow(m, 2) < m) ? [val - Math.pow(m, 2), m] : [m, Math.pow(m, 2) - 2 * m - val];
+        } else {
+            console.warn(method + " is not a valid method");
         }
         
         if (!negative || negative === false) {
