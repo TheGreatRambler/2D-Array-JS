@@ -57,13 +57,16 @@
             times[item] += t1 - t0;
             var failtext = "";
             var output = tdarrayindex.decode(indexarray, item);
-            if (output[0] !== x && output[1] !== y) {
+            var text;
+            if (!output) {
+              text = "No decoding func";
+            } else if (output[0] !== x && output[1] !== y) {
               fails[item]++;
-              failtext = "FAIL";
+              text = " -> (" + output[0] + ", " + output[1] + ") FAIL";
             } else {
-              failtext = "PASS";
+              text = " -> (" + output[0] + ", " + output[1] + ") PASS";
             }
-            datatext += "(" + x + ", " + y + "): " + item + " -> " + indexarray + " -> (" + output[0] + ", " + output[1] + ") " + failtext + "<br>";
+            datatext += "(" + x + ", " + y + "): " + item + " -> " + indexarray + text + "<br>";
             if (testerobject[item][indexarray]) {
               repeats[item]++;
             }
