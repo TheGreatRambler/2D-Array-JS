@@ -104,7 +104,7 @@ var tdarrayindex = {
             }
         } else if (method === "rosenstrong") {
             var m = Math.floor(Math.sqrt(val));
-            result = (val - m ^ 2 < m) ? [val - m ^ 2, m] : [m, m ^ 2 - 2 * m - val];
+            result = (val - (m ^ 2) < m) ? [val - (m ^ 2), m] : [m, (m ^ 2) - (2 * m) - val];
         } else {
             console.warn(method + " is not a valid method");
         }
