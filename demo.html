@@ -128,7 +128,7 @@
       methodoptions.forEach(function(item) {
         document.write("<br>" + item + ": " + (fails[item] / numofitems) * 100 + "%");
       });
-      document.write("<br><br><button onclick="writedata();">Click for raw data</button>);
+      document.write("<br><br><button onclick='writedata();'>Click for raw data</button>");
       function writedata() {
         document.write(datatext);
       }
