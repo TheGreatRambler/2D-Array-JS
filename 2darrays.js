@@ -1,7 +1,7 @@
 var tdarrayindex = {
     encode: function(xval, yval, method, negative) {
         var x, y;
-        if (!negative || negative === false) {
+        if (typeof negative === "undefined" || negative === false) {
             x = xval;
             y = yval;
         } else if (negative === true) {
@@ -57,7 +57,7 @@ var tdarrayindex = {
     },
     decode: function(val, method, negative, debug) {
         var debugbool;
-        if (!debug || debug === true) {
+        if (typeof debug === "undefined" || debug === true) {
             debugbool = true;
         } else if (debug === false) {
             debugbool = false;
