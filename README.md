@@ -1,6 +1,6 @@
 # 2D-Array-JS
 
-Collection of functions that, given a x and y value, returns an index in a one dimensional array. These functions can also be used as pairing functions.
+Collection of functions that, given a x and y value, returns an index in a one dimensional array. These functions can also be used as pairing functions. Supports AMD and use in the browser.
 
 ## API
 
