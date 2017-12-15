@@ -7,7 +7,7 @@
     <script src="2darrays.js"></script>
     <script>
     var fontsizemultiply = 0.5;
-    var dimensions = [20, 20];
+    var dimensions = [30, 30];
     var numofitems = dimensions[0] * dimensions[1];
     var datatext = "";
     var methodoptions = ["szudzik", "interleave", "triangle", "primefactor", "cantorpair", "bitwise", "hopullman", "rosenstrong"];
@@ -128,8 +128,10 @@
       methodoptions.forEach(function(item) {
         document.write("<br>" + item + ": " + (fails[item] / numofitems) * 100 + "%");
       });
-      document.write("<br><br>");
-      document.write(datatext);
+      document.write("<br><br><button onclick="writedata();">Click for raw data</button>);
+      function writedata() {
+        document.write(datatext);
+      }
     </script>
   </body>
 
