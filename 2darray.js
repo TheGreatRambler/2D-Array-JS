@@ -1,3 +1,4 @@
+// 2darray.js by TheGreatRambler https://github.com/TheGreatRambler/2D-Array-JS/
 (function(root, factory) {
     if (typeof define === 'function' && define.amd) {
         define([], factory);
